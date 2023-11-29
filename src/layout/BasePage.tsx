@@ -1,5 +1,7 @@
+import LearnList from "../components/LearnList";
+
 const BasePage = () => {
-  return <>basepage</>;
+  return <LearnList />;
 };
 
 export default BasePage;
