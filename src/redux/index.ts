@@ -3,7 +3,7 @@ import learnReducer from './slices/LearnListSlice'
 
 const store = configureStore({
     reducer: {
-        learnlisr: learnReducer
+        learnList: learnReducer
     }
 })
 
