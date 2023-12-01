@@ -9,6 +9,7 @@ type LearnItem = {
 }
 
 type LearnItemList = {
+    find(arg0: (item: any) => any): any;
     list: LearnItem[],
     loading: boolean, 
     error: string | null
@@ -17,7 +18,10 @@ type LearnItemList = {
 const initialState:LearnItemList = {
     list: [],
     loading: false,
-    error: null
+    error: null,
+    find: function (arg0: (item: any) => any) {
+        throw new Error("Function not implemented.");
+    }
 }
 
 const LearnSlice = createSlice({
@@ -38,10 +42,19 @@ const LearnSlice = createSlice({
             if (toggler) {
                 toggler.completed = !toggler.completed
             }
+        },
+        updateDescription(state, actions){
+            const obj = actions.payload
+            let upItem = state.list.find(item => item.id === obj.id)
+            if(upItem) {
+            upItem.description = obj.description}
+        },
+        deleteItem(state, actions) {
+            state.list = state.list.filter(item => item.id !== actions.payload)
         }
     }
 })
 
-export const {addItem, toggleCompleted} = LearnSlice.actions
+export const {addItem, toggleCompleted, updateDescription, deleteItem} = LearnSlice.actions
 
 export default LearnSlice.reducer

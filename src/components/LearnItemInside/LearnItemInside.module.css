@@ -1,0 +1,27 @@
+.itemInside {
+    display: flex;
+    flex-direction: column;
+}
+
+.backlink {
+    text-decoration: none;
+    background-color: aliceblue;
+    margin-bottom: 20px;
+}
+
+.word {
+    background-color: blue;
+    margin-bottom: 20px;
+    color: beige;
+}
+
+.descInput {
+    background-color: aqua;
+    margin-bottom: 20px;
+}
+
+.descText {
+    background-color: rgb(42, 91, 91);
+    margin-bottom: 20px;
+    color: beige;
+}

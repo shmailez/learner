@@ -1,5 +1,6 @@
+import { Link } from "react-router-dom";
 import { useAppDispatch } from "../../hooks/rtk-hooks";
-import { toggleCompleted } from "../../redux/slices/LearnListSlice";
+import { deleteItem, toggleCompleted } from "../../redux/slices/LearnListSlice";
 import styles from "./LearnItem.module.css";
 
 interface LearnItemInterface {
@@ -19,7 +20,10 @@ const LearnItem: React.FC<LearnItemInterface> = ({ id, title, completed }) => {
         checked={completed}
         id={id}
       />
-      <span>{title}</span>
+      <Link to={`/learner/${id}`}>
+        <span>{title}</span>
+      </Link>
+      <span onClick={() => dispatch(deleteItem(id))}> X </span>
     </li>
   );
 };
