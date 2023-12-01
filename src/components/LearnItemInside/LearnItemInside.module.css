@@ -1,6 +1,7 @@
 .itemInside {
     display: flex;
     flex-direction: column;
+    background-color: blanchedalmond;
 }
 
 .backlink {

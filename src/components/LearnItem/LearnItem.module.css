@@ -1,5 +1,15 @@
 .liItem {
-    background-color: red;
+    display: flex;
+    justify-content: space-between;
     margin: 4px;
     margin-bottom: 20px;
+}
+
+.liItemText {
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.deleteliItemButton{
+    color: aliceblue;
 }

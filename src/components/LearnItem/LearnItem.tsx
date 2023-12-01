@@ -20,10 +20,16 @@ const LearnItem: React.FC<LearnItemInterface> = ({ id, title, completed }) => {
         checked={completed}
         id={id}
       />
-      <Link to={`/learner/${id}`}>
+      <Link className={styles.liItemText} to={`/learner/${id}`}>
         <span>{title}</span>
       </Link>
-      <span onClick={() => dispatch(deleteItem(id))}> X </span>
+      <span
+        className={styles.deleteliItemButton}
+        onClick={() => dispatch(deleteItem(id))}
+      >
+        {" "}
+        X{" "}
+      </span>
     </li>
   );
 };
