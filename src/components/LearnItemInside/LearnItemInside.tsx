@@ -2,15 +2,10 @@ import { Link, Params, useParams } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../hooks/rtk-hooks";
 import styles from "./LearnItemInside.module.css";
 import { useState } from "react";
-import { updateDescription } from "../../redux/slices/LearnListSlice";
-
-type ItemType = {
-  id: string;
-  title: string;
-  completed: boolean;
-  important: boolean;
-  description: string;
-};
+import {
+  deleteItem,
+  updateDescription,
+} from "../../redux/slices/LearnListSlice";
 
 const LearnItemInside: React.FC = () => {
   const param: Readonly<Params<string>> = useParams();
@@ -33,11 +28,26 @@ const LearnItemInside: React.FC = () => {
     dispatch(updateDescription({ id: item.id, description: desc }));
   };
 
+  const first = item.description.split(" ");
+  console.log(item.description);
+  console.log(first);
+
   return (
     <div className={styles.itemInside}>
-      <Link className={styles.backlink} to={"/learner/"}>
-        Назад
-      </Link>
+      <div className={styles.itemInsideHead}>
+        <span>
+          <Link className={styles.backlink} to={"/learner/"}>
+            Назад
+          </Link>
+        </span>
+
+        <span onClick={() => dispatch(deleteItem(item.id))}>
+          <Link className={styles.deletebutton} to={"/learner/"}>
+            Удалить{" "}
+          </Link>
+        </span>
+      </div>
+
       <span className={styles.word}>{item.title}</span>
 
       {vis ? (
@@ -50,13 +60,15 @@ const LearnItemInside: React.FC = () => {
         </form>
       ) : (
         <p className={styles.descText} onClick={() => setVis((vis) => !vis)}>
-          {item.description}
+          {first[0]}
         </p>
       )}
 
       <button className={styles.button} onClick={descriptionSub}>
         Значение
       </button>
+
+      <p>{item.description}</p>
     </div>
   );
 };

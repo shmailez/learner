@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     margin: 4px;
-    margin-bottom: 20px;
+    /* margin-bottom: 5px; */
     /* background-color: blueviolet; */
 }
 
@@ -23,7 +23,7 @@
 .liItemText {
     color: rgb(91, 90, 89);
     text-decoration: none;
-    margin: 20px 0;
+    margin: 16px 0;
     font-size: 1.5em;
 }
 
