@@ -14,12 +14,17 @@ const LearnItem: React.FC<LearnItemInterface> = ({ id, title, completed }) => {
   const dispatch = useAppDispatch();
   return (
     <li className={styles.liItem} key={id}>
-      <input
-        type="checkbox"
-        onChange={() => dispatch(toggleCompleted(id))}
-        checked={completed}
-        id={id}
-      />
+      <label className={styles.labelcheckboxItem}>
+        <input
+          type="checkbox"
+          className={styles.checkboxItem}
+          onChange={() => dispatch(toggleCompleted(id))}
+          checked={completed}
+          id={id}
+        />
+        <span>★</span>
+      </label>
+
       <Link className={styles.liItemText} to={`/learner/${id}`}>
         <span>{title}</span>
       </Link>

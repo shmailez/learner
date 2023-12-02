@@ -1,28 +1,40 @@
 .itemInside {
     display: flex;
     flex-direction: column;
-    background-color: blanchedalmond;
+    align-items: center;
 }
 
 .backlink {
     text-decoration: none;
     background-color: aliceblue;
     margin-bottom: 20px;
+    padding: 15px;
 }
 
 .word {
-    background-color: blue;
-    margin-bottom: 20px;
-    color: beige;
+    margin: 20px;
+    border-bottom: 1px solid #878787;
+    width: 100%;
 }
 
 .descInput {
-    background-color: aqua;
+    background-color: rgb(213, 213, 213);
     margin-bottom: 20px;
+    padding: 20px;
+    border: none;
+    text-align: center;
 }
 
 .descText {
-    background-color: rgb(42, 91, 91);
+    background-color: rgb(91, 91, 91);
+    padding: 20px 0;
+    width: 100%;
     margin-bottom: 20px;
     color: beige;
+}
+
+.button {
+    background-color: aqua;
+    padding: 15px;
+    border: none;
 }

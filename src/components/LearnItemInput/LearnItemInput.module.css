@@ -1,3 +1,15 @@
 .generalInput{
-    margin-bottom: 20px;
+    margin: 20px 0;
+}
+
+.input {
+    padding: 10px;
+    border: none;
+    background-color: rgb(219, 238, 255);
+}
+
+.addButton {
+    padding: 10px;
+    border: none;
+    background-color: rgb(196, 196, 255);
 }

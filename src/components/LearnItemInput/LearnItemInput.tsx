@@ -13,8 +13,14 @@ const LearnItemInput = () => {
 
   return (
     <div className={styles.generalInput}>
-      <input value={title} onChange={(e) => setTitle(e.target.value)} />
-      <button onClick={() => handleTItle()}>add</button>
+      <input
+        className={styles.input}
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+      />
+      <button className={styles.addButton} onClick={() => handleTItle()}>
+        add
+      </button>
     </div>
   );
 };

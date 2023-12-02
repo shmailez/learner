@@ -1,13 +1,30 @@
 .liItem {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 4px;
     margin-bottom: 20px;
+    /* background-color: blueviolet; */
+}
+
+.checkboxItem {
+    appearance: none;
+}
+
+.checkboxItem+span {
+    font-size: 2em;
+    color: rgb(184, 184, 184);
+}
+
+.checkboxItem:checked+span {
+    color: rgb(255, 225, 76);
 }
 
 .liItemText {
-    color: antiquewhite;
+    color: rgb(91, 90, 89);
     text-decoration: none;
+    margin: 20px 0;
+    font-size: 1.5em;
 }
 
 .deleteliItemButton{

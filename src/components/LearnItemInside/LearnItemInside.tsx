@@ -54,7 +54,9 @@ const LearnItemInside: React.FC = () => {
         </p>
       )}
 
-      <button onClick={descriptionSub}>Значение</button>
+      <button className={styles.button} onClick={descriptionSub}>
+        Значение
+      </button>
     </div>
   );
 };
