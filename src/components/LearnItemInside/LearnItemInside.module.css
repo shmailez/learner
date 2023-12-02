@@ -15,6 +15,7 @@
     margin: 20px;
     border-bottom: 1px solid #878787;
     width: 100%;
+    font-size: 1.5em;
 }
 
 .descInput {
@@ -23,6 +24,7 @@
     padding: 20px;
     border: none;
     text-align: center;
+    font-size: 1.5em;
 }
 
 .descText {
@@ -31,6 +33,7 @@
     width: 100%;
     margin-bottom: 20px;
     color: beige;
+    font-size: 1.5em;
 }
 
 .button {
