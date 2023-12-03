@@ -31,6 +31,10 @@ const LearnItemInside: React.FC = () => {
   const first = item.description.split(" ");
   console.log(item.description);
   console.log(first);
+  // const other = item.description.split(" ");
+  const other = [...first];
+
+  other.shift();
 
   return (
     <div className={styles.itemInside}>
@@ -68,7 +72,7 @@ const LearnItemInside: React.FC = () => {
         Значение
       </button>
 
-      <p>{item.description}</p>
+      <p className={styles.other}>{item.description}</p>
     </div>
   );
 };
