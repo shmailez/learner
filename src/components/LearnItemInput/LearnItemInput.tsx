@@ -19,7 +19,7 @@ const LearnItemInput = () => {
         onChange={(e) => setTitle(e.target.value)}
       />
       <button className={styles.addButton} onClick={() => handleTItle()}>
-        add
+        Добавить
       </button>
     </div>
   );

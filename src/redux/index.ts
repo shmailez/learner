@@ -1,5 +1,6 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import learnReducer from './slices/LearnListSlice'
+import longReducer from './slices/LongListSlice'
 import storage from "redux-persist/lib/storage";
 import { 
     persistStore,
@@ -13,7 +14,8 @@ import {
 } from 'redux-persist';
 
 const rootReducer = combineReducers({
-    learnList: learnReducer
+    learnList: learnReducer,
+    longList: longReducer
 })
 
 const resistConfig = {

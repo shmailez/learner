@@ -6,6 +6,7 @@ import {
   deleteItem,
   updateDescription,
 } from "../../redux/slices/LearnListSlice";
+import { transItem } from "../../redux/slices/LongListSlice";
 
 const LearnItemInside: React.FC = () => {
   const param: Readonly<Params<string>> = useParams();
@@ -28,6 +29,19 @@ const LearnItemInside: React.FC = () => {
     dispatch(updateDescription({ id: item.id, description: desc }));
   };
 
+  const toMemoris = () => {
+    dispatch(
+      transItem({
+        id: item.id,
+        title: item.title,
+        completed: item.completed,
+        important: item.important,
+        description: item.description,
+      })
+    );
+    dispatch(deleteItem(item.id));
+  };
+
   const first = item.description.split(" ");
   console.log(item.description);
   console.log(first);
@@ -42,6 +56,12 @@ const LearnItemInside: React.FC = () => {
         <span>
           <Link className={styles.backlink} to={"/learner/"}>
             Назад
+          </Link>
+        </span>
+
+        <span onClick={() => toMemoris()}>
+          <Link className={styles.deletebutton} to={"/learner/"}>
+            В мемориз
           </Link>
         </span>
 
@@ -69,7 +89,7 @@ const LearnItemInside: React.FC = () => {
       )}
 
       <button className={styles.button} onClick={descriptionSub}>
-        Значение
+        Добавить значение
       </button>
       {item.description && <p className={styles.other}>{item.description}</p>}
     </div>
