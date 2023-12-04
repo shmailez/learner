@@ -28,13 +28,13 @@ const LearnItem: React.FC<LearnItemInterface> = ({ id, title, completed }) => {
       <Link className={styles.liItemText} to={`/learner/${id}`}>
         <span>{title}</span>
       </Link>
-      <span
+      {/* <span
         className={styles.deleteliItemButton}
         onClick={() => dispatch(deleteItem(id))}
       >
         {" "}
         X{" "}
-      </span>
+      </span> */}
     </li>
   );
 };

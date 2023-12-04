@@ -71,8 +71,7 @@ const LearnItemInside: React.FC = () => {
       <button className={styles.button} onClick={descriptionSub}>
         Значение
       </button>
-
-      <p className={styles.other}>{item.description}</p>
+      {item.description && <p className={styles.other}>{item.description}</p>}
     </div>
   );
 };
