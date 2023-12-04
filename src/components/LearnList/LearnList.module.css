@@ -14,8 +14,10 @@
 .memorisListbutton{
     position: absolute;
     right: 0;
+    top: 85px;
     padding: 10px;
     margin: 10px;
     border: none;
     background-color: rgb(196, 196, 255);
+    border-radius: 10px
 }
