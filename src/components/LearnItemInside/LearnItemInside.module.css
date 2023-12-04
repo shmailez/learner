@@ -18,6 +18,13 @@
     padding: 15px;
 }
 
+.tomemorisbutton {
+    text-decoration: none;
+    background-color: rgb(77, 172, 255);
+    color: aliceblue;
+    padding: 15px;
+}
+
 .deletebutton{
     text-decoration: none;
     background-color: rgb(38, 112, 178);
@@ -26,7 +33,7 @@
 }
 
 .word {
-    margin: 20px;
+    margin: 60px 0;
     border-bottom: 1px solid #878787;
     width: 100%;
     font-size: 1.5em;
@@ -51,9 +58,10 @@
 }
 
 .button {
-    background-color: aqua;
+    background-color: rgb(0, 46, 79);
     padding: 15px;
     border: none;
+    color: beige;
 }
 
 .other {

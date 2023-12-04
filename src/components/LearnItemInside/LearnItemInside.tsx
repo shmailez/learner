@@ -43,9 +43,6 @@ const LearnItemInside: React.FC = () => {
   };
 
   const first = item.description.split(" ");
-  console.log(item.description);
-  console.log(first);
-  // const other = item.description.split(" ");
   const other = [...first];
 
   other.shift();
@@ -60,7 +57,7 @@ const LearnItemInside: React.FC = () => {
         </span>
 
         <span onClick={() => toMemoris()}>
-          <Link className={styles.deletebutton} to={"/learner/"}>
+          <Link className={styles.tomemorisbutton} to={"/learner/"}>
             В мемориз
           </Link>
         </span>

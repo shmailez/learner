@@ -12,6 +12,8 @@
 }
 
 .memorisListbutton{
+    position: absolute;
+    right: 0;
     padding: 10px;
     margin: 10px;
     border: none;

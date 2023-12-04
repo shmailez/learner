@@ -1,5 +1,6 @@
 import { useAppDispatch } from "../../hooks/rtk-hooks";
 import { removeItem } from "../../redux/slices/LongListSlice";
+import styles from "./LongItem.module.css";
 
 interface LongItemInterface {
   id: string;
@@ -14,12 +15,17 @@ const LongItem: React.FC<LongItemInterface> = ({ id, title, description }) => {
 
   return (
     <>
-      <li key={id}>
+      <li className={styles.longItem} key={id}>
         <span>{title}</span>
         <br />
         <span>{description}</span>
         <br />
-        <span onClick={() => dispatch(removeItem(id))}>DEL</span>
+        <span
+          className={styles.delButton}
+          onClick={() => dispatch(removeItem(id))}
+        >
+          DEL
+        </span>
       </li>
     </>
   );

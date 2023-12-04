@@ -1,20 +1,15 @@
 import { useState } from "react";
-import { useAppDispatch, useAppSelector } from "../../hooks/rtk-hooks";
+import { useAppSelector } from "../../hooks/rtk-hooks";
 import LearnItem from "../LearnItem/LearnItem";
 import styles from "./LearnList.module.css";
-import { transItem } from "../../redux/slices/LongListSlice";
 import LongItem from "../LongItem/LongItem";
 
 const LearnList = () => {
   const learnList = useAppSelector((state) => state.learnList.list);
-  console.log(learnList);
 
   const importantList = learnList.filter((item) => item.completed === true);
-  console.log(importantList);
 
   const longList = useAppSelector((state) => state.longList.long);
-
-  console.log(longList);
 
   const [learn, setLearn] = useState(true);
 
@@ -26,28 +21,20 @@ const LearnList = () => {
         className={styles.memorisListbutton}
         onClick={() => setLearn((learn) => !learn)}
       >
-        мемориз
+        {learn ? "мемориз" : "лёрнер"}
       </button>
 
       {learn ? (
         <>
           <div className={styles.toggleList}>
-            {vis ? (
-              <button
-                className={styles.toggleListbutton}
-                onClick={() => setVis((vis) => !vis)}
-              >
-                важные
-              </button>
-            ) : (
-              <button
-                className={styles.toggleListbutton}
-                onClick={() => setVis((vis) => !vis)}
-              >
-                весь список
-              </button>
-            )}
+            <button
+              className={styles.toggleListbutton}
+              onClick={() => setVis((vis) => !vis)}
+            >
+              {vis ? "важные" : "весь список"}
+            </button>
           </div>
+
           <div className="learn">
             {vis ? (
               <ul className={styles.ulList}>

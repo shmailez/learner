@@ -1,0 +1,12 @@
+.longItem {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    background-color: rgba(238, 130, 238, 0.484);
+    font-size: 1.3em;
+}
+
+.delButton {
+    background-color: darkorchid;
+    color: floralwhite;
+}
