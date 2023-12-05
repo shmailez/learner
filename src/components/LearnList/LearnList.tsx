@@ -21,7 +21,7 @@ const LearnList = () => {
         className={styles.memorisListbutton}
         onClick={() => setLearn((learn) => !learn)}
       >
-        {learn ? "M" : "L"}
+        {learn ? "Memoris" : "Learner"}
       </button>
 
       {learn ? (
