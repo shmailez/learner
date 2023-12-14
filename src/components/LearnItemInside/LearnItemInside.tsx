@@ -85,10 +85,10 @@ const LearnItemInside: React.FC = () => {
         </p>
       )}
 
+      {item.description && <p className={styles.other}>{item.description}</p>}
       <button className={styles.button} onClick={descriptionSub}>
         Добавить значение
       </button>
-      {item.description && <p className={styles.other}>{item.description}</p>}
     </div>
   );
 };
