@@ -44,7 +44,6 @@ const LearnItemInside: React.FC = () => {
 
   const first = item.description.split(" ");
   const other = [...first];
-
   other.shift();
 
   return (
@@ -86,6 +85,7 @@ const LearnItemInside: React.FC = () => {
       )}
 
       {item.description && <p className={styles.other}>{item.description}</p>}
+
       <button className={styles.button} onClick={descriptionSub}>
         Добавить значение
       </button>

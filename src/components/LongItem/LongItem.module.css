@@ -28,7 +28,8 @@
 }
 
 .longItemModal {
-    position: absolute;
+    /* position: absolute; */
+    position: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,7 +38,7 @@
     top: 0px;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     backdrop-filter: blur(8px);
 }
 

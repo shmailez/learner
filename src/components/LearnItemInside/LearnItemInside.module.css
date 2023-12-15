@@ -38,45 +38,51 @@
 }
 
 .word {
-    margin: 60px 0;
-    border-bottom: 1px solid #878787;
+    /* margin: 60px 0; */
+    margin-top: 60px;
+    /* border-bottom: 1px solid #878787; */
     width: 100%;
     font-size: 1.8em;
 }
 
 .descInput {
     background-color: rgb(213, 213, 213);
-    margin-bottom: 20px;
-    padding: 20px;
+    /* margin-bottom: 20px; */
+    padding: 20px 0;
     border: none;
+    border-radius: 16px;
     text-align: center;
     font-size: 1.5em;
+    /* width: 100%; */
 }
 
 .descText {
-    background-color: rgb(0, 114, 44);
-    padding: 20px 0;
+    background-color: rgb(38, 112, 178);
+    padding: 18px 0;
     width: 100%;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     color: beige;
     font-size: 1.5em;
 }
 
 .button {
-    background-color: rgb(0, 46, 79);
+    background-color: rgb(38, 112, 178);
     padding: 15px;
     border: none;
     border-radius: 16px;
     color: beige;
+    margin-top: 20px;
 }
 
 .other {
-    background-color: rgb(41, 77, 77);
+    background-color: rgb(77, 172, 255);
     color: aliceblue;
-    padding: 10px;
+    /* padding: 10px; */
     /* border-radius: 5px; */
-    margin: 20px 0;
+    /* margin: 20px 0; */
+    /* margin-bottom: 20px; */
     /* width: 50vw; */
     word-spacing: 100vw;
     text-align: left;
+    width: 100%;
 }
