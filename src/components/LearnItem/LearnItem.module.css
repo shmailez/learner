@@ -30,6 +30,12 @@
     font-size: 1.5em;
 }
 
+.liItemDel{
+    position: absolute;
+    right: 0;
+    color: antiquewhite;
+}
+
 .deleteliItemButton{
     color: aliceblue;
 }

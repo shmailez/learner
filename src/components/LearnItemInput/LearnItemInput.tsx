@@ -18,7 +18,12 @@ const LearnItemInput = () => {
         value={title}
         onChange={(e) => setTitle(e.target.value)}
       />
-      <button className={styles.addButton} onClick={() => handleTItle()}>
+
+      <button
+        disabled={!title}
+        className={styles.addButton}
+        onClick={() => handleTItle()}
+      >
         Добавить
       </button>
     </div>
